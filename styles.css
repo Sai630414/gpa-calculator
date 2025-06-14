@@ -10,7 +10,7 @@ body, html {
 }
 
 .hero-container {
-  background-image: url('/bacckground\ image.jpg'); /* Replace with your image path */
+  background-image: url('./bacckground\ image.jpg'); /* Replace with your image path */
   height: 100vh;
   background-size: cover;
   background-position: center;
