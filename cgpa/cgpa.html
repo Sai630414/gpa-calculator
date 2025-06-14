@@ -8,48 +8,65 @@
 </head>
 <body>
 
-  <h1>CGPA Calculator</h1>
+  <div class="container">
+    <h1>CGPA Calculator</h1>
 
-  <form id="cgpaForm">
-    <table id="cgpaTable">
-      <thead>
-        <tr>
-          <th>Credits</th>
-          <th>S (10)</th>
-          <th>A (9)</th>
-          <th>B (8)</th>
-          <th>C (7)</th>
-          <th>D (6)</th>
-          <th>E (5)</th>
-          <th>F (0)</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody">
-        <!-- Rows will be added by JS -->
-      </tbody>
-    </table>
+    <form id="cgpaForm">
+      <div class="table-responsive">
+        <table id="cgpaTable">
+          <thead>
+            <tr>
+              <th>Credits</th>
+              <th>S (10)</th>
+              <th>A (9)</th>
+              <th>B (8)</th>
+              <th>C (7)</th>
+              <th>D (6)</th>
+              <th>E (5)</th>
+              <th>F (0)</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Rows will be added by JS -->
+          </tbody>
+        </table>
+      </div>
 
-    <button type="submit">Calculate CGPA</button>
-  </form>
+      <button type="submit" class="submit-btn">Calculate CGPA</button>
+    </form>
 
-  <div class="result" id="result"></div>
-  <div class="instructions-box">
-    
-  <h2>How to Enter Subject Details:</h2>
-  <p>
-    Use the table below to enter the number of subjects you have for each credit and grade combination.
-    Each row represents a <strong>credit value</strong> (like 1, 2, 3, 4, etc.), and each column is a <strong>grade</strong> (S, A, B, etc.).
-    For example, if you had two 4-credit subjects with an A grade, enter "2" in the cell where the <strong>4-credit row</strong> and <strong>A grade column</strong> intersect.
-    After entering all your subject details, click on the <strong>"Calculate CGPA"</strong> button to view your CGPA.
-  </p>
-</div>
+    <div class="result" id="result"></div>
 
-<footer class="footer">
-  <p>
-    💡 For any issues or feedback with this calculator, feel free to reach out at
-    <a href="mailto:saikondareddypala@gmail.com">saikondareddypala@gmail.com</a>
-  </p>
-</footer>
+    <div class="instructions-box">
+      <h2>How to Enter Subject Details:</h2>
+      <p>
+        Use the table below to enter the number of subjects you have for each credit and grade combination.
+        Each row represents a <strong>credit value</strong> (like 1, 2, 3, 4, etc.), and each column is a <strong>grade</strong> (S, A, B, etc.).
+        For example, if you had two 4-credit subjects with an A grade, enter "2" in the cell where the <strong>4-credit row</strong> and <strong>A grade column</strong> intersect.
+        After entering all your subject details, click on the <strong>"Calculate CGPA"</strong> button to view your CGPA.
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      💡 For any issues or feedback with this calculator, feel free to reach out at
+      <a href="mailto:saikondareddypala@gmail.com">saikondareddypala@gmail.com</a>
+    </p>
+  </footer>
+  <section class="reviews">
+  <h2>💬 Share Your Review</h2>
+  <div id="comments"></div>
+</section>
+
+<script src="https://utteranc.es/client.js"
+        repo="Sai630414/gpa-calculator"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
   <script src="cgpa.js"></script>
 </body>
 </html>

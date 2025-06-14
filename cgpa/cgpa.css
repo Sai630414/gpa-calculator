@@ -1,84 +1,127 @@
+/* Reset and base styling */
 body {
-  font-family: Arial, sans-serif;
-  padding: 30px;
-  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  color: #333;
 }
 
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #2c3e50;
+  color: white;
 }
 
 th, td {
-  padding: 10px;
+  padding: 12px;
   text-align: center;
-  border: 1px solid #999;
+  border: 1px solid #ddd;
 }
 
-input[type="number"] {
+tbody td input {
   width: 60px;
-  padding: 5px;
+  padding: 6px;
   text-align: center;
-  border-radius: 4px;
-  border: 1px solid #ccc;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #6a1b9a;
+/* Button */
+.submit-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #27ae60;
   color: white;
   border: none;
   border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-button:hover {
-  background-color: #4a148c;
+.submit-btn:hover {
+  background-color: #219150;
 }
 
+/* Result */
 .result {
-  font-size: 24px;
-  font-weight: bold;
   text-align: center;
   margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2980b9;
 }
+
+/* Instructions */
 .instructions-box {
-  background-color: #f3e5f5;
-  border-left: 6px solid #7b1fa2;
+  background: #fff;
+  border-left: 5px solid #3498db;
   padding: 20px;
-  margin-bottom: 25px;
+  margin-top: 30px;
   border-radius: 10px;
-  color: #333;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .instructions-box h2 {
   margin-top: 0;
-  color: #6a1b9a;
+  color: #2c3e50;
 }
+
+/* Footer */
 .footer {
-  margin-top: 50px;
   text-align: center;
-  padding: 15px 10px;
-  background-color: #ede7f6;
-  color: #4a148c;
-  font-size: 15px;
-  border-top: 2px solid #9575cd;
-  border-radius: 8px;
+  padding: 20px;
+  margin-top: 40px;
+  background: #2c3e50;
+  color: white;
 }
 
 .footer a {
-  color: #6a1b9a;
-  font-weight: bold;
+  color: #00c8ff;
   text-decoration: none;
 }
 
-.footer a:hover {
-  text-decoration: underline;
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  tbody td input {
+    width: 45px;
+  }
 }
