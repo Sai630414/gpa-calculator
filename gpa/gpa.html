@@ -3,29 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Semester GPA Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>GPA Calculator</title>
+  <link rel="stylesheet" href="gpa.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-  <h1>Semester GPA Calculator</h1>
-<div style="margin-left: 220px;">
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-black" href="#">🎓 GPA Zone</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-black" href="#">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./cgpa/cgpa.html">CGPA Calculator</a></li>
+            <li><a class="dropdown-item" href="./gpa/gpa.html">Sem GPA Calculator</a></li>
+            <li><a class="dropdown-item" href="./attendance/attendance.html">Attendance Calculator</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" href="https://github.com/Sai630414/gpa-calculator" target="_blank">Source Code</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>GPA Calculator</h1>
   <form id="gpaForm">
-    <div id="subjectsContainer"></div>
-    <button type="button" id="addSubjectBtn">+ Add Subject</button>
-    <br/>
-    <button type="submit" style="margin-left: 50px;">Calculate GPA</button>
+    <div class="table-responsive">
+      <table id="gpaTable">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Grade</th>
+            <th>Credits</th>
+          </tr>
+        </thead>
+        <tbody id="gpaBody">
+          <!-- Rows will be added dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <button type="button" class="submit-btn" id="addSubjectBtn">➕ Add Subject</button>
+    <button type="submit" class="submit-btn">Calculate GPA</button>
   </form>
+
+  <div class="result" id="gpaResult"></div>
 </div>
-  <div class="result" id="result"></div>
+
+ <section class="reviews">
+  <h2>💬 Share Your Review</h2>
+  <div id="comments"></div>
+</section>
+
+ 
+
+<script src="https://utteranc.es/client.js"
+        repo="Sai630414/gpa-calculator"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 
 <footer class="footer">
-  <p>
-    💡 For any issues or feedback with this calculator, feel free to reach out at
+  <p>💡 For any issues or feedback with this calculator, feel free to reach out at
     <a href="mailto:saikondareddypala@gmail.com">saikondareddypala@gmail.com</a>
   </p>
 </footer>
 
-  <script src="script.js"></script>
+<script src="gpa.js"></script>
 </body>
 </html>

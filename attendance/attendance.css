@@ -1,87 +1,105 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #fceabb, #f8b500);
-  padding: 20px;
   margin: 0;
+  padding: 0;
+  background: #f2f2f2;
   color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 h1 {
   text-align: center;
-  font-size: 28px;
+  color: #2c3e50;
   margin-bottom: 20px;
 }
 
 .form-container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  background-color: #fff7e6;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-label {
-  margin-top: 15px;
+.form-container label {
   font-weight: 600;
 }
 
-input {
+input[type="number"] {
   padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #999;
   border-radius: 6px;
+  border: 1px solid #ccc;
   font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-button {
-  margin-top: 20px;
+.submit-btn {
+  margin-top: 10px;
   padding: 12px;
-  background-color: #ff9800;
+  background-color: #27ae60;
   color: white;
-  font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-button:hover {
-  background-color: #e65100;
+.submit-btn:hover {
+  background-color: #219150;
 }
 
 .result {
-  max-width: 600px;
-  margin: 30px auto;
+  text-align: center;
+  margin-top: 20px;
   font-size: 18px;
-  background: #fff3e0;
-  border-left: 5px solid #ff9800;
-  padding: 20px;
-  border-radius: 10px;
-  word-wrap: break-word;
+  font-weight: 500;
+  color: #2980b9;
 }
 
-/* ✅ Mobile Responsive Styling */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background: #2c3e50;
+  color: white;
+}
+
+.footer a {
+  color: #00c8ff;
+  text-decoration: none;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar.scrolled .nav-link,
+.custom-navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
 @media (max-width: 600px) {
+  .container {
+    margin: 120px 10px 40px 10px;
+  }
+
   h1 {
     font-size: 22px;
   }
 
-  .form-container {
-    padding: 15px;
+  .submit-btn {
+    width: 100%;
   }
 
-  input, button {
-    font-size: 15px;
-  }
-
-  .result {
-    font-size: 16px;
-    padding: 15px;
+  input[type="number"] {
+    font-size: 14px;
   }
 }

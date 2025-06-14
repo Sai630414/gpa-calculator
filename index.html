@@ -11,17 +11,49 @@
     rel="stylesheet"
   />
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- 💎 Transparent Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold text-white" href="#">🎓 GPA Zone</a>
+ <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-white" href="#">🎓 GPA Zone</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="./cgpa/cgpa.html">CGPA Calculator</a></li>
+            <li><a class="dropdown-item" href="./gpa/gpa.html">Sem GPA Calculator</a></li>
+            <li><a class="dropdown-item" href="./attendance/attendance.html">Attendance Calculator</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="https://github.com/Sai630414/gpa-calculator" target="_blank">
+            Source Code
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+ 
 
   <!-- 🎯 Hero Section -->
   <div class="hero-container">
