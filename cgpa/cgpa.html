@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" href="cgpa.css" />
+</head>
+<body>
+
+  <h1>CGPA Calculator</h1>
+
+  <form id="cgpaForm">
+    <table id="cgpaTable">
+      <thead>
+        <tr>
+          <th>Credits</th>
+          <th>S (10)</th>
+          <th>A (9)</th>
+          <th>B (8)</th>
+          <th>C (7)</th>
+          <th>D (6)</th>
+          <th>E (5)</th>
+          <th>F (0)</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Rows will be added by JS -->
+      </tbody>
+    </table>
+
+    <button type="submit">Calculate CGPA</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script src="cgpa.js"></script>
+</body>
+</html>
