@@ -49,3 +49,36 @@ button:hover {
   text-align: center;
   margin-top: 20px;
 }
+.instructions-box {
+  background-color: #f3e5f5;
+  border-left: 6px solid #7b1fa2;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  color: #333;
+}
+
+.instructions-box h2 {
+  margin-top: 0;
+  color: #6a1b9a;
+}
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #ede7f6;
+  color: #4a148c;
+  font-size: 15px;
+  border-top: 2px solid #9575cd;
+  border-radius: 8px;
+}
+
+.footer a {
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

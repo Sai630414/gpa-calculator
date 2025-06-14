@@ -3,7 +3,7 @@ body {
     justify-content: center;
   font-family: Arial, sans-serif;
   padding: 30px;
-  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
 }
 
 h1 {
@@ -50,4 +50,25 @@ button:hover {
 
 #gpaform{
     margin-left: 100px;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #ede7f6;
+  color: #4a148c;
+  font-size: 15px;
+  border-top: 2px solid #9575cd;
+  border-radius: 8px;
+}
+
+.footer a {
+  color: #6a1b9a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
