@@ -5,119 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CGPA Calculator</title>
   <link rel="stylesheet" href="cgpa.css" />
-   <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-<link rel="icon" href="https://img.freepik.com/free-vector/student-graduation-cap-with-gold-tassel-ribbon_107791-16542.jpg?semt=ais_hybrid&w=740" type="image/png" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="https://img.freepik.com/free-vector/student-graduation-cap-with-gold-tassel-ribbon_107791-16542.jpg?semt=ais_hybrid&w=740" type="image/png" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body style="margin-top: 25px;">
 
-
-<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar bg-light">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold text-black" href="#">🎓 CGPA Zone</a>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-black" href="../index.html">Home</a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link text-black" href="../index.html">Home</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown">
-            Services
-          </a>
+          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown">Services</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./cgpa.html">CGPA Calculator</a></li>
             <li><a class="dropdown-item" href="../gpa/gpa.html">Sem GPA Calculator</a></li>
             <li><a class="dropdown-item" href="../attendance/attendance.html">Attendance Calculator</a></li>
           </ul>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-black" href="https://github.com/Sai630414/gpa-calculator" target="_blank">
-            Source Code
-          </a>
+        <li class="nav-item"><a class="nav-link text-black" href="https://github.com/Sai630414/gpa-calculator" target="_blank">Source Code</a></li>
+        <li class="nav-item profile-hover">
+          <a href="#" class="nav-link text-dark">Developed By</a>
+          <div class="profile-tooltip">
+            <img src="../photo.jpg" alt="Your Photo">
+            <div class="social-icons">
+              <a href="https://www.instagram.com/sai_.reddy05" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/sai-kondareddy-338269291/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/Sai630414" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
         </li>
-
-         <li class="nav-item profile-hover">
-  <a href="#" class="nav-link text-dark">Developed By</a>
-  <div class="profile-tooltip">
-    <img src="../photo.jpg" alt="Your Photo">
-    <div class="social-icons">
-      <a href="https://www.instagram.com/sai_.reddy05?igsh=MTRyeGQyOXBzNnBrOA==" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sai-kondareddy-338269291/" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://github.com/Sai630414" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-</li>
       </ul>
     </div>
   </div>
 </nav>
 
-  
-  <div class="container">
-    <h1>CGPA Calculator</h1>
+<div class="container mt-5 pt-4">
+  <h1 class="mb-4">CGPA Calculator</h1>
 
-    <form id="cgpaForm">
-      <div class="table-responsive">
-        <table id="cgpaTable">
-          <thead>
-            <tr>
-              <th>Credits</th>
-              <th>S (10)</th>
-              <th>A (9)</th>
-              <th>B (8)</th>
-              <th>C (7)</th>
-              <th>D (6)</th>
-              <th>E (5)</th>
-              <th>F (0)</th>
-            </tr>
-          </thead>
-          <tbody id="tableBody">
-            <!-- Rows will be added by JS -->
-          </tbody>
-        </table>
-      </div>
 
-      <button type="submit" class="submit-btn">Calculate CGPA</button>
-    </form>
 
-    <div class="result" id="result"></div>
-
-    <div class="instructions-box">
-      <h2>How to Enter Subject Details:</h2>
-      <p>
-        Use the table below to enter the number of subjects you have for each credit and grade combination.
-        Each row represents a <strong>credit value</strong> (like 1, 2, 3, 4, etc.), and each column is a <strong>grade</strong> (S, A, B, etc.).
-        For example, if you had two 4-credit subjects with an A grade, enter "2" in the cell where the <strong>4-credit row</strong> and <strong>A grade column</strong> intersect.
-        After entering all your subject details, click on the <strong>"Calculate CGPA"</strong> button to view your CGPA.
-      </p>
+  <form id="cgpaForm">
+    <div class="table-responsive">
+      <table id="cgpaTable" class="table table-bordered text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Credits</th>
+            <th>S (10)</th>
+            <th>A (9)</th>
+            <th>B (8)</th>
+            <th>C (7)</th>
+            <th>D (6)</th>
+            <th>E (5)</th>
+            <th>F (0)</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows will be generated by JS -->
+        </tbody>
+      </table>
     </div>
+  <!-- Custom Credit Input -->
+  <div class="mb-4 d-flex flex-wrap gap-2 align-items-center">
+    <label for="customCredit" class="form-label mb-0">Enter Custom Credit:</label>
+    <input type="number" step="0.5" id="customCredit" class="form-control" style="width: 120px;" placeholder="e.g. 7.5" />
+    <button type="button" class="btn btn-success" id="addCustomCredit">Add Custom Credit</button>
   </div>
+    <button type="submit" class="btn btn-primary mt-3">Calculate CGPA</button>
+  </form>
 
- 
-  <section class="reviews">
+  <div class="result mt-3" id="result"></div>
+
+  <div class="instructions-box mt-5">
+    <h2>How to Enter Subject Details:</h2>
+    <p>Each row is for a <strong>credit value</strong> (like 3, 4, 6, etc.) and each column is a <strong>grade</strong> (S, A, B...).</p>
+    <p>Example: If you had two 4-credit subjects with an A grade, enter <strong>2</strong> in the 4-credit row under A.</p>
+    <p>Click <strong>Calculate CGPA</strong> to get your result.</p>
+  </div>
+</div>
+
+<section class="reviews mt-5">
   <h2>💬 Share Your Review</h2>
   <div id="comments"></div>
 </section>
-
- 
 
 <script src="https://utteranc.es/client.js"
         repo="Sai630414/gpa-calculator"
@@ -126,13 +102,11 @@
         crossorigin="anonymous"
         async>
 </script>
-<footer class="footer">
-    <p>
-      💡 For any issues or feedback with this calculator, feel free to reach out at
-      <a href="mailto:saikondareddypala@gmail.com">saikondareddypala@gmail.com</a>
-    </p>
-  </footer>
 
-  <script src="cgpa.js"></script>
+<footer class="footer mt-4 text-center">
+  <p>💡 For any issues or feedback, email: <a href="mailto:saikondareddypala@gmail.com">saikondareddypala@gmail.com</a></p>
+</footer>
+
+<script src="cgpa.js"></script>
 </body>
 </html>

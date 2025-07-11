@@ -9,34 +9,39 @@ const gradePoints = {
 };
 
 const grades = Object.keys(gradePoints);
-const credits = [1, 1.5, 2, 3, 4, 5, 20];
+let credits = [1, 1.5, 2, 3, 4, 5, 6, 20]; // Initial default credits
 const tableBody = document.getElementById("tableBody");
 
-// Generate table rows for each credit
-credits.forEach(credit => {
+// Function to create a row
+function createCreditRow(credit) {
   const row = document.createElement("tr");
+  row.setAttribute("data-credit", credit);
 
-  // First column: Credit label
   const creditCell = document.createElement("td");
   creditCell.textContent = credit;
   row.appendChild(creditCell);
 
-  // For each grade, input field
   grades.forEach(grade => {
     const cell = document.createElement("td");
     const input = document.createElement("input");
     input.type = "number";
     input.min = "0";
-    input.value = "";
     input.name = `c${credit}_g${grade}`;
+    input.classList.add("form-control", "text-center");
     cell.appendChild(input);
     row.appendChild(cell);
   });
 
+  return row;
+}
+
+// Render default rows
+credits.forEach(credit => {
+  const row = createCreditRow(credit);
   tableBody.appendChild(row);
 });
 
-// Handle form submission
+// CGPA Calculation Logic
 document.getElementById("cgpaForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -46,7 +51,8 @@ document.getElementById("cgpaForm").addEventListener("submit", function (e) {
   credits.forEach(credit => {
     grades.forEach(grade => {
       const inputName = `c${credit}_g${grade}`;
-      const count = parseInt(document.querySelector(`[name="${inputName}"]`).value) || 0;
+      const inputElement = document.querySelector(`[name="${inputName}"]`);
+      const count = parseInt(inputElement?.value) || 0;
 
       totalPoints += count * credit * gradePoints[grade];
       totalCredits += count * credit;
@@ -56,9 +62,41 @@ document.getElementById("cgpaForm").addEventListener("submit", function (e) {
   const resultDiv = document.getElementById("result");
 
   if (totalCredits === 0) {
-    resultDiv.textContent = "Please enter at least one subject.";
+    resultDiv.textContent = "⚠️ Please enter at least one subject.";
+    resultDiv.classList.add("text-danger");
+    resultDiv.classList.remove("text-success");
   } else {
     const cgpa = totalPoints / totalCredits;
-    resultDiv.textContent = `Your CGPA is: ${cgpa.toFixed(2)}`;
+    resultDiv.textContent = `✅ Your CGPA is: ${cgpa.toFixed(2)}`;
+    resultDiv.classList.remove("text-danger");
+    resultDiv.classList.add("text-success", "fw-bold");
   }
+});
+
+// Add custom credit logic
+document.getElementById("addCustomCredit").addEventListener("click", () => {
+  const creditInput = document.getElementById("customCredit");
+  const creditValue = parseFloat(creditInput.value);
+
+  if (!creditValue || creditValue <= 0) {
+    alert("Please enter a valid custom credit greater than 0.");
+    return;
+  }
+
+  if (credits.includes(creditValue)) {
+    alert(`Credit ${creditValue} already exists.`);
+    return;
+  }
+
+  credits.push(creditValue);
+  credits.sort((a, b) => a - b);
+
+  // Clear table and re-render
+  tableBody.innerHTML = "";
+  credits.forEach(credit => {
+    const row = createCreditRow(credit);
+    tableBody.appendChild(row);
+  });
+
+  creditInput.value = "";
 });
