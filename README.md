@@ -1,60 +1,65 @@
 # GPA/CGPA Calculator – Grade History Extension
 
-This project consists of a **website** to calculate CGPA and a **Chrome Extension** to fetch and organize your grade history from your college portal. The extension filters the required data and helps you easily calculate your CGPA.
+This project includes a **website** to calculate CGPA and a **Chrome Extension** that extracts and filters your grade history from your college portal. The extension helps you quickly and accurately prepare the data needed for CGPA calculation.
 
 ---
 
 ## 🚀 Live Website
 
-👉 [Click here to open the CGPA Calculator](https://sai630414.github.io/gpa-calculator)
+👉 [Open the CGPA Calculator](https://sai630414.github.io/gpa-calculator)
 
 ---
 
-## 📦 Download Extension (ZIP)
+## 🧩 How to Install the Chrome Extension (Unpacked)
 
-🔗 [Download grade-history-extension.zip]([https://github.com/Sai630414/gpa-calculator/raw/main/grede%20history%20extension/grade-history-extension.zip](https://github.com/Sai630414/gpa-calculator/raw/e1cb9a7d46460dd21e20a5a271f880916003cd62/grede%20history%20extension/grade-history-extension.zip))
+Follow these steps to add the extension manually in Chrome:
 
-> If clicking doesn’t start the download, right-click and choose **“Save link as...”**
+1. Go to the folder:  
+   🔗 [grede history extension](https://github.com/Sai630414/gpa-calculator/tree/main/grede%20history%20extension)
 
----
+2. Click the green **`<> Code`** button → **Download ZIP**.
 
-## 🧩 How to Install the Chrome Extension
+3. Extract the ZIP file to any location on your computer.
 
-1. **Download** and **extract** the ZIP file above.
-2. Open Chrome and go to: `chrome://extensions/`
-3. Enable **Developer mode** (toggle at the top right).
-4. Click on **“Load unpacked”**
-5. Select the extracted folder (the one containing `manifest.json`)
-6. You should now see the extension added to Chrome.
+4. Open Google Chrome and visit:  
+   `chrome://extensions/`
 
----
+5. Enable **Developer mode** using the toggle in the top-right corner.
 
-## 📁 Extension Source Folder
+6. Click **"Load unpacked"**.
 
-Browse the extension code here:  
-🔗 [grede history extension folder](https://github.com/Sai630414/gpa-calculator/tree/main/grede%20history%20extension)
+7. Select the extracted folder (the one that contains `manifest.json`).
+
+8. The extension will now be installed and active in your Chrome toolbar.
 
 ---
 
 ## 📌 What the Extension Does
 
-- Scrapes your **grade history** from the college portal.
-- Filters out:
-  - Profile row (top section)
-  - Section-wise credit summary
-  - CGPA row at the bottom
-- Displays only **credited courses with S-F grades**, making CGPA calculation easy.
+- Fetches your **grade history** from the college portal.
+- Automatically **filters out**:
+  - Profile information at the top
+  - Section-wise credit summaries
+  - Final CGPA section at the bottom
+- Displays only **credited subjects with S to F grades**, like:
+  - 4 S-graded courses
+  - 3 A-graded courses
+  - and so on
 
 ---
 
-## 🧮 Use It with the CGPA Calculator Website
+## 🧮 Use with CGPA Calculator Website
 
-After copying or extracting the clean grade data using the extension, paste the results into the [CGPA Calculator Website](https://sai630414.github.io/gpa-calculator) to get your CGPA instantly.
+1. Open the [CGPA Calculator Website](https://sai630414.github.io/gpa-calculator)
+
+2. After using the extension to extract your clean grade data, input or paste it into the calculator.
+
+3. Instantly view your calculated CGPA.
 
 ---
 
 ## 🤝 Contributions & Feedback
 
-Feel free to open issues or pull requests to improve the project.
+If you have suggestions, bug reports, or contributions, feel free to open an issue or submit a pull request.
 
 ---
