@@ -12,7 +12,7 @@ This project consists of a **website** to calculate CGPA and a **Chrome Extensio
 
 ## 📦 Download Extension (ZIP)
 
-🔗 [Download grade-history-extension.zip](https://github.com/Sai630414/gpa-calculator/raw/main/grede%20history%20extension/grade-history-extension.zip)
+🔗 [Download grade-history-extension.zip]([https://github.com/Sai630414/gpa-calculator/raw/main/grede%20history%20extension/grade-history-extension.zip](https://github.com/Sai630414/gpa-calculator/raw/e1cb9a7d46460dd21e20a5a271f880916003cd62/grede%20history%20extension/grade-history-extension.zip))
 
 > If clicking doesn’t start the download, right-click and choose **“Save link as...”**
 
