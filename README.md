@@ -1,6 +1,6 @@
 # GPA/CGPA Calculator – Grade History Extension
 
-This project includes a **website** to calculate CGPA and a **Chrome Extension** that extracts and filters your grade history from your college portal. The extension helps you quickly and accurately prepare the data needed for CGPA calculation.
+This project includes a **website** to calculate CGPA and a **Chrome Extension** that extracts and filters your grade history from your college portal. The extension helps you quickly and accurately prepare the data needed for CGPA calculations.
 
 ---
 
